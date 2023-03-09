@@ -93,6 +93,10 @@ class LinearTimerController {
     _controller.stop();
   }
 
+  void setDuration(Duration duration) {
+    _controller.duration = duration;
+  }
+
   // Sets the duration for the timer
   set _duration(Duration duration) {
     _controller.duration = duration;
