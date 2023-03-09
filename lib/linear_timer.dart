@@ -6,6 +6,7 @@ abstract class _Subscriber {
   void onStart();
   void onEnd();
   void onUpdate();
+  void setDuration(Duration duration);
 }
 
 /// Class that enables controlling the timer from outside the LinearTimer
@@ -223,5 +224,10 @@ class _LinearTimerState extends State<LinearTimer>
     if (widget.onUpdate != null) {
       widget.onUpdate!.call();
     }
+  }
+
+  @override
+  void setDuration(Duration duration) {
+    _timerController._duration = duration;
   }
 }
